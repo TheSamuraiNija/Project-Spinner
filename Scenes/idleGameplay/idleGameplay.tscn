@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://onu7by7mynj7" path="res://Idle/idleScene.tscn" id="1_cpyme"]
 [ext_resource type="PackedScene" uid="uid://cbt0xkqhw8b37" path="res://Ui/health/health.tscn" id="3_3u8uy"]
 [ext_resource type="Texture2D" uid="uid://rm7sgo235v7" path="res://Ui/StartRound.png" id="3_xky01"]
-[ext_resource type="AudioStream" uid="uid://xmgori3eq3ft" path="res://SFX/spinspin.mp3" id="4_hiomb"]
 [ext_resource type="Texture2D" uid="uid://bn2qrrdsmctbi" path="res://Ui/Spin.png" id="4_i683h"]
 [ext_resource type="AudioStream" uid="uid://cheqhpg3j6s1p" path="res://SFX/ping (1).mp3" id="4_lwvp5"]
+[ext_resource type="AudioStream" uid="uid://bbxyjntmr8mn5" path="res://SFX/spinloop.mp3" id="6_xky01"]
 
 [node name="idleGameplay" type="Node2D" unique_id=1721040295 groups=["idleGamplay"]]
 script = ExtResource("1_bs1r2")
@@ -47,20 +47,21 @@ flat = true
 clip_text = true
 expand_icon = true
 
+[node name="spin2" type="AudioStreamPlayer2D" parent="." unique_id=154901326]
+stream = ExtResource("6_xky01")
+volume_db = -9.613
+panning_strength = 0.0
+parameters/looping = true
+
+[node name="ping" type="AudioStreamPlayer2D" parent="." unique_id=1829388388]
+stream = ExtResource("4_lwvp5")
+
 [node name="health" parent="." unique_id=417040812 instance=ExtResource("3_3u8uy")]
 offset_left = 521.0
 offset_top = 520.0
 offset_right = 521.0
 offset_bottom = 520.0
 scale = Vector2(5.9776683, 5.9776683)
-
-[node name="spin2" type="AudioStreamPlayer2D" parent="." unique_id=154901326]
-stream = ExtResource("4_hiomb")
-volume_db = -9.613
-parameters/looping = true
-
-[node name="ping" type="AudioStreamPlayer2D" parent="." unique_id=1829388388]
-stream = ExtResource("4_lwvp5")
 
 [connection signal="pressed" from="startRound" to="." method="doStartRoundPressed"]
 [connection signal="pressed" from="spin" to="." method="doSpinPressed"]
