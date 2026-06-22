@@ -89,7 +89,7 @@ func doInitialPush():
 	body.apply_impulse(body.transform.basis.z * -start_speed)
 
 func doTopple():
-	var nodes = get_tree().get_nodes_in_group("Spinner")
+	var nodes = get_tree().get_nodes_in_group("idleGameplay")
 	if nodes.size() > 0:
 		nodes[0].stopSpinner()
 	state = State.TOPPLE
