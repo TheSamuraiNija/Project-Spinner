@@ -20,7 +20,7 @@ func _ready():
 
 
 # Starts the round by spawning the idle model
-func doStartRoundPressed() -> void:
+func _on_start_round_pressed() -> void:
 	if current_model != null or current_spinner != null:
 		return
 	if idle_scene == null:
@@ -33,7 +33,7 @@ func doStartRoundPressed() -> void:
 
 
 # Converts the model into a spinner and begins the spin phase
-func doSpinPressed() -> void:
+func _on_spin_pressed() -> void:
 	if current_model == null:
 		return
 
