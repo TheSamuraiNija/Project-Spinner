@@ -32,4 +32,4 @@ icon = ExtResource("3_ruglv")
 flat = true
 icon_alignment = 1
 
-[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="startButton" to="." method="doStartButtonPressed"]

@@ -62,5 +62,5 @@ parameters/looping = true
 [node name="ping" type="AudioStreamPlayer2D" parent="." unique_id=1829388388]
 stream = ExtResource("4_lwvp5")
 
-[connection signal="pressed" from="startRound" to="." method="_on_start_round_pressed"]
-[connection signal="pressed" from="spin" to="." method="_on_spin_pressed"]
+[connection signal="pressed" from="startRound" to="." method="doStartRoundPressed"]
+[connection signal="pressed" from="spin" to="." method="doSpinPressed"]
