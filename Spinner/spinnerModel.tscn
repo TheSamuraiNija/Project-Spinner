@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xgako6ssgj16"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p6lj4"]
+
+[node name="spinnerModel" type="Node3D" unique_id=574416323]
+
+[node name="spinnerBody" type="Node3D" parent="." unique_id=148953145]
+transform = Transform3D(0.9931695, 0.116680585, 0, -0.116680585, 0.9931695, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="model" type="MeshInstance3D" parent="spinnerBody" unique_id=96455127]
+transform = Transform3D(0.30787015, 0, 0, 0, 1, 0, 0, 0, 0.2647941, 0, 0, 0)
+mesh = SubResource("BoxMesh_p6lj4")
+
+[node name="model2" type="MeshInstance3D" parent="spinnerBody" unique_id=614698074]
+transform = Transform3D(0.6612531, 0, 0, 0, 0.29455364, 0, 0, 0, 0.6134134, 0, 0, 0)
+mesh = SubResource("BoxMesh_p6lj4")
+
+[node name="model3" type="MeshInstance3D" parent="spinnerBody" unique_id=1164374256]
+transform = Transform3D(0.86790013, 0, 0, 0, 0.29455364, 0, 0, 0, 0.8221598, 0, 0.29356003, 0)
+mesh = SubResource("BoxMesh_p6lj4")

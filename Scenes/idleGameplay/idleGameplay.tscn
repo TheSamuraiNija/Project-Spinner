@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cxox8ojxw528h"]
+
+[ext_resource type="Script" uid="uid://dljl0oylw35a2" path="res://Scenes/idleGameplay/idleGameplay.gd" id="1_bs1r2"]
+[ext_resource type="PackedScene" uid="uid://onu7by7mynj7" path="res://Idle/idleScene.tscn" id="1_cpyme"]
+[ext_resource type="PackedScene" uid="uid://cbt0xkqhw8b37" path="res://Ui/health/health.tscn" id="3_3u8uy"]
+
+[node name="idleGameplay" type="Node2D" unique_id=1721040295 groups=["idleGamplay"]]
+script = ExtResource("1_bs1r2")
+
+[node name="viewportContainer" type="SubViewportContainer" parent="." unique_id=830376269]
+offset_left = 241.0
+offset_top = 23.0
+offset_right = 753.0
+offset_bottom = 322.0
+scale = Vector2(1.6324717, 1.6324717)
+
+[node name="viewport" type="SubViewport" parent="viewportContainer" unique_id=413864069]
+handle_input_locally = false
+size = Vector2i(512, 299)
+render_target_update_mode = 4
+
+[node name="idleScene" parent="viewportContainer/viewport" unique_id=2081581836 instance=ExtResource("1_cpyme")]
+
+[node name="startRound" type="Button" parent="." unique_id=846992281]
+offset_left = 60.0
+offset_top = 80.0
+offset_right = 161.0
+offset_bottom = 111.0
+text = "Start Round"
+
+[node name="spin" type="Button" parent="." unique_id=2048318367]
+visible = false
+offset_left = 408.0
+offset_top = 383.0
+offset_right = 509.0
+offset_bottom = 414.0
+text = "SPIN!"
+
+[node name="health" parent="." unique_id=417040812 instance=ExtResource("3_3u8uy")]
+offset_left = 244.00002
+offset_top = 552.0
+offset_right = 244.00002
+offset_bottom = 552.0
+scale = Vector2(5.9776683, 5.9776683)
+
+[connection signal="pressed" from="startRound" to="." method="_on_start_round_pressed"]
+[connection signal="pressed" from="spin" to="." method="_on_spin_pressed"]
