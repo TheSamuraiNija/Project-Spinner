@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://5biyxls5gdwo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_81fl3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6u0xr"]
+radius = 0.49466315
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2d607"]
+radius = 0.2
+
+[node name="spinnerCollision" type="RigidBody3D" unique_id=1130952523]
+
+[node name="baseCollision" type="CollisionShape3D" parent="." unique_id=1489824525]
+shape = SubResource("SphereShape3D_81fl3")
+
+[node name="toppleCollision" type="CollisionShape3D" parent="." unique_id=947492194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2532982, 0)
+shape = SubResource("SphereShape3D_6u0xr")
+disabled = true
+
+[node name="toppleCollision2" type="CollisionShape3D" parent="." unique_id=1775524360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28973073, 0)
+shape = SubResource("SphereShape3D_2d607")
+disabled = true

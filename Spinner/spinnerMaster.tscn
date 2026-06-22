@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cwxctig7ieccs"]
+
+[ext_resource type="Script" uid="uid://cy31sjotfa3ms" path="res://Spinner/spinnerMaster.gd" id="1_2pk2f"]
+[ext_resource type="PackedScene" uid="uid://5biyxls5gdwo" path="res://Spinner/spinnerCollision.tscn" id="1_bp143"]
+[ext_resource type="PackedScene" uid="uid://xgako6ssgj16" path="res://Spinner/spinnerModel.tscn" id="2_2pk2f"]
+
+[node name="spinnerMaster" type="Node3D" unique_id=916552712 groups=["Spinner"]]
+script = ExtResource("1_2pk2f")
+max_health = 20.0
+start_speed = 0.0
+topple_spin_force = 3.0
+despawn_delay = 3.0
+bounce_strength = 20.0
+ray_distance = 0.5
+
+[node name="spinnerCollision" parent="." unique_id=1130952523 instance=ExtResource("1_bp143")]
+
+[node name="spinnerModel" parent="." unique_id=574416323 instance=ExtResource("2_2pk2f")]
+
+[editable path="spinnerModel"]

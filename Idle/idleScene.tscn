@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://onu7by7mynj7"]
+
+[ext_resource type="Script" uid="uid://cip7ntarcrptm" path="res://Idle/idleScene.gd" id="1_y8say"]
+[ext_resource type="PackedScene" uid="uid://nsep2wgnvorl" path="res://Idle/board.tscn" id="2_ap0ps"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_81fl3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d607"]
+
+[node name="idleScene" type="Node3D" unique_id=2081581836 groups=["idleScene"]]
+script = ExtResource("1_y8say")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1761980702]
+transform = Transform3D(1, 0, 0, 0, 0.3803678, 0.9248353, 0, -0.9248353, 0.3803678, 0, 5.2995377, 2.6167605)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1200325238]
+transform = Transform3D(1, 0, 0, 0, 0.32867754, 0.9444422, 0, -0.9444422, 0.32867754, 0, 3.2999542, 2.4915504)
+
+[node name="board" parent="." unique_id=2069727369 instance=ExtResource("2_ap0ps")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=703389509]
+transform = Transform3D(0.95419455, 0.24784958, 0.16758072, -0.2991868, 0.7904653, 0.53446424, 0, -0.5601208, 0.82841104, 0, 0, 0)
+
+[node name="plane" type="MeshInstance3D" parent="." unique_id=1522772315]
+transform = Transform3D(27.409239, 0, 0, 0, -9.588729e-07, 0.99999964, 0, -21.936455, -4.3711374e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_81fl3")
+surface_material_override/0 = SubResource("StandardMaterial3D_2d607")
+
+[node name="spinnerSpawn" type="Node3D" parent="." unique_id=2072929365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27717048, 2.4430757, 0.9977057)
