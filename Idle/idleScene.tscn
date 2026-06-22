@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cip7ntarcrptm" path="res://Idle/idleScene.gd" id="1_y8say"]
 [ext_resource type="PackedScene" uid="uid://nsep2wgnvorl" path="res://Idle/board.tscn" id="2_ap0ps"]
+[ext_resource type="Texture2D" uid="uid://ctkkei5crqylh" path="res://Idle/sky.png" id="3_5modt"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_81fl3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d607"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdgsd"]
+albedo_texture = ExtResource("3_5modt")
 
 [node name="idleScene" type="Node3D" unique_id=2081581836 groups=["idleScene"]]
 script = ExtResource("1_y8say")
@@ -22,9 +24,9 @@ transform = Transform3D(1, 0, 0, 0, 0.32867754, 0.9444422, 0, -0.9444422, 0.3286
 transform = Transform3D(0.95419455, 0.24784958, 0.16758072, -0.2991868, 0.7904653, 0.53446424, 0, -0.5601208, 0.82841104, 0, 0, 0)
 
 [node name="plane" type="MeshInstance3D" parent="." unique_id=1522772315]
-transform = Transform3D(27.409239, 0, 0, 0, -9.588729e-07, 0.99999964, 0, -21.936455, -4.3711374e-08, 0, 0, 0)
+transform = Transform3D(21.693863, 0, 0, 0, -7.5892865e-07, 0.79147965, 0, -17.362265, -3.4596678e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_81fl3")
-surface_material_override/0 = SubResource("StandardMaterial3D_2d607")
+surface_material_override/0 = SubResource("StandardMaterial3D_tdgsd")
 
 [node name="spinnerSpawn" type="Node3D" parent="." unique_id=2072929365]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27717048, 2.4430757, 0.9977057)
