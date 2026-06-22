@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bdxwr1xa0o6ou"]
+
+[ext_resource type="AudioStream" uid="uid://scvjh5nyxpx1" path="res://Scenes/menu/menutap.mp3" id="1_81fu2"]
+
+[node name="AudioPlayer" type="Node2D" unique_id=88723999]
+
+[node name="ButtonPress" type="AudioStreamPlayer2D" parent="." unique_id=601849748]
+stream = ExtResource("1_81fu2")
+volume_db = 9.265

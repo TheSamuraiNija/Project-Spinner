@@ -14,6 +14,7 @@ func _ready():
 		idle_scene = scenes[0]
 
 func _on_start_round_pressed() -> void:
+	AudioPlayer.get_node("ButtonPress").play()
 	if current_model != null or current_spinner != null:
 		return
 	if idle_scene == null:
@@ -24,6 +25,7 @@ func _on_start_round_pressed() -> void:
 	$spin.visible = true
 	$startRound.disabled = true
 func _on_spin_pressed() -> void:
+	AudioPlayer.get_node("ButtonPress").play()
 	if current_model == null:
 		return
 
@@ -50,3 +52,5 @@ func stopSpinner():
 	
 func playPing():
 	$ping.play()
+func playPress():
+	AudioPlayer.get_node("ButtonPress").play()
