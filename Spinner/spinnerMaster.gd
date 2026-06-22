@@ -106,16 +106,15 @@ func doInitialPush():
 
 # Handles topple behavior and notifies gameplay controller
 func doTopple():
-	var nodes = get_tree().get_nodes_in_group("idleGameplay")
-	if nodes.size() > 0:
-		nodes[0].stopSpinner()
-
 	state = State.TOPPLE
 	body.freeze = false
 	base_collision.disabled = true
 	topple_collision.disabled = false
 	topple_collision2.disabled = false
 	_set_rays_enabled(false)
+	var nodes = get_tree().get_nodes_in_group("idleGameplay")
+	if nodes.size() > 0:
+		nodes[0].stopSpinner()
 
 	body.apply_torque_impulse(Vector3(randf(), randf(), randf()) * topple_spin_force)
 	endRun()

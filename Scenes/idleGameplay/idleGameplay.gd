@@ -38,6 +38,7 @@ func doSpinPressed() -> void:
 		return
 
 	$spin2.play()
+	print("STARTING SPINNER SOUND")
 
 	idle_scene.despawnModel()
 	current_model = null
@@ -61,6 +62,7 @@ func resetRound():
 
 # Audio helpers
 func stopSpinner():
+	print("STOPPING SPINNER SOUND")
 	$spin2.stop()
 
 func playPing():
