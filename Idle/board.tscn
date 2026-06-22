@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://nsep2wgnvorl"]
 
+[ext_resource type="Texture2D" uid="uid://cr7dbo5voqpic" path="res://Idle/Grass.png" id="1_jc65b"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_81fl3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7drg"]
+albedo_texture = ExtResource("1_jc65b")
+normal_scale = 16.0
+heightmap_enabled = true
+heightmap_scale = 16.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2d607"]
 
 [node name="board" type="StaticBody3D" unique_id=1893304231]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1956190247]
-transform = Transform3D(7.11111, 0.028994612, 0, -0.20627052, 0.9995799, 0, 0, 0, 6.182639, 1.5810713e-09, -1.7881393e-07, 0)
+transform = Transform3D(7.11111, 0.028994612, 0, -0.20627052, 0.9995799, 0, 0, 0, 6.182639, 1.5810713e-09, 0.10639769, 0)
 mesh = SubResource("BoxMesh_81fl3")
+surface_material_override/0 = SubResource("StandardMaterial3D_j7drg")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2029569901]
 transform = Transform3D(0.39533055, 0, 0, 0, 1.0000002, 0, 0, 0, 6.1826396, 3.7547147, 1, 0)
