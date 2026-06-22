@@ -20,7 +20,7 @@ func _ready():
 
 
 # Starts the round by spawning the idle model
-func _on_start_round_pressed() -> void:
+func doStartRoundPressed() -> void:
 	if current_model != null or current_spinner != null:
 		return
 	if idle_scene == null:
@@ -33,7 +33,7 @@ func _on_start_round_pressed() -> void:
 
 
 # Converts the model into a spinner and begins the spin phase
-func _on_spin_pressed() -> void:
+func doSpinPressed() -> void:
 	if current_model == null:
 		return
 
@@ -54,14 +54,14 @@ func _on_spin_pressed() -> void:
 
 
 # Called when the spinner finishes its run
-func doResetRound():
+func resetRound():
 	current_spinner = null
 	$startRound.disabled = false
 
 
 # Audio helpers
-func doStopSpinner():
+func stopSpinner():
 	$spin2.stop()
 
-func doPlayPing():
+func playPing():
 	$ping.play()

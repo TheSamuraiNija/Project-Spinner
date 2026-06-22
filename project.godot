@@ -15,6 +15,11 @@ run/main_scene="uid://dc1chj1r56bti"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+IdleGameplay="*uid://cxox8ojxw528h"
+AudioPlayer="*uid://bdxwr1xa0o6ou"
+
 [display]
 
 window/stretch/mode="canvas_items"
@@ -24,6 +29,7 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://Idle/": "blue",
+"res://SFX/": "teal",
 "res://Scenes/": "red",
 "res://Spinner/": "yellow",
 "res://Ui/": "purple"
