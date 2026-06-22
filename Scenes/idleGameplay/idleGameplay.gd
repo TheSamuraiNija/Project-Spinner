@@ -33,7 +33,7 @@ func _on_spin_pressed() -> void:
 
 	current_spinner = idle_scene.spawnSpinner(spinner_scene)
 
-	current_spinner.setMaxHealth(100.0)
+	current_spinner.setMaxHealth(20.0)
 	current_spinner.setSpinSpeed(720.0)
 	current_spinner.setStartSpeed(5.0)
 
@@ -42,7 +42,8 @@ func _on_spin_pressed() -> void:
 	$spin.visible = false
 
 func resetRound():
-	$AudioStreamPlayer2D.stop()
 	current_spinner = null
 	$startRound.disabled = false
-	
+
+func stopSpinner():
+	$AudioStreamPlayer2D.stop()

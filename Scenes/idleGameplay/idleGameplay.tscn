@@ -36,10 +36,10 @@ offset_bottom = 414.0
 text = "SPIN!"
 
 [node name="health" parent="." unique_id=417040812 instance=ExtResource("3_3u8uy")]
-offset_left = 244.00002
-offset_top = 552.0
-offset_right = 244.00002
-offset_bottom = 552.0
+offset_left = 521.0
+offset_top = 520.0
+offset_right = 521.0
+offset_bottom = 520.0
 scale = Vector2(5.9776683, 5.9776683)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=154901326]

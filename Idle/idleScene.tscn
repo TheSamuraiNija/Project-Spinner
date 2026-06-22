@@ -8,6 +8,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdgsd"]
 albedo_texture = ExtResource("3_5modt")
+uv1_scale = Vector3(3.995, 3.995, 3.995)
+uv1_triplanar = true
 
 [node name="idleScene" type="Node3D" unique_id=2081581836 groups=["idleScene"]]
 script = ExtResource("1_y8say")
