@@ -42,7 +42,8 @@ func _on_spin_pressed() -> void:
 	$spin.visible = false
 
 func resetRound():
-	$AudioStreamPlayer2D.stop()
 	current_spinner = null
 	$startRound.disabled = false
-	
+
+func stopSpinner():
+	$AudioStreamPlayer2D.stop()
