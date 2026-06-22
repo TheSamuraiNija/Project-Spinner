@@ -29,6 +29,7 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://Idle/": "blue",
+"res://SFX/": "teal",
 "res://Scenes/": "red",
 "res://Spinner/": "yellow",
 "res://Ui/": "purple"
