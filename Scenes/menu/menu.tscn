@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqjcdd3ap7tr" path="res://Scenes/menu/menu.gd" id="1_2oqc5"]
 [ext_resource type="Texture2D" uid="uid://cxxdhx6l025fn" path="res://Scenes/menu/Title.png" id="2_nga6i"]
+[ext_resource type="Texture2D" uid="uid://du5egy6rmvyql" path="res://Ui/Start.png" id="3_ruglv"]
 
 [node name="menu" type="Control" unique_id=1479196330]
 layout_mode = 3
@@ -22,10 +23,13 @@ texture = ExtResource("2_nga6i")
 
 [node name="startButton" type="Button" parent="." unique_id=1815146436]
 layout_mode = 0
-offset_left = 419.0
-offset_top = 425.0
-offset_right = 700.0
-offset_bottom = 552.0
-text = "Start"
+offset_left = 422.0
+offset_top = 425.00006
+offset_right = 1477.0
+offset_bottom = 1130.0
+scale = Vector2(0.3083682, 0.29109502)
+icon = ExtResource("3_ruglv")
+flat = true
+icon_alignment = 1
 
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]

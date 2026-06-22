@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nsep2wgnvorl"]
 
 [ext_resource type="Texture2D" uid="uid://cr7dbo5voqpic" path="res://Idle/Grass.png" id="1_jc65b"]
+[ext_resource type="Texture2D" uid="uid://lhvvrrxuuins" path="res://Fence.png" id="2_j7drg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwvp5"]
 albedo_texture = ExtResource("1_jc65b")
@@ -12,7 +13,13 @@ uv1_world_triplanar = true
 lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_lwvp5")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ijk8"]
+albedo_texture = ExtResource("2_j7drg")
+uv1_scale = Vector3(2.285, 2.285, 2.285)
+uv2_scale = Vector3(-0.855, -0.855, -0.855)
+
 [sub_resource type="BoxMesh" id="BoxMesh_hiomb"]
+material = SubResource("StandardMaterial3D_5ijk8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2d607"]
 

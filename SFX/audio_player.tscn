@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bdxwr1xa0o6ou"]
+
+[ext_resource type="AudioStream" uid="uid://scvjh5nyxpx1" path="res://SFX/menutap.mp3" id="1_81fu2"]
+[ext_resource type="AudioStream" uid="uid://bxbyqb61txn3p" path="res://SFX/chachiing.mp3" id="2_f1804"]
+
+[node name="AudioPlayer" type="Node2D" unique_id=88723999]
+
+[node name="ButtonPress" type="AudioStreamPlayer2D" parent="." unique_id=601849748]
+stream = ExtResource("1_81fu2")
+volume_db = 9.265
+
+[node name="MoneySound" type="AudioStreamPlayer2D" parent="." unique_id=1205819372]
+stream = ExtResource("2_f1804")
