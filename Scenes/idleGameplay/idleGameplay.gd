@@ -23,11 +23,11 @@ func _on_start_round_pressed() -> void:
 
 	$spin.visible = true
 	$startRound.disabled = true
-
 func _on_spin_pressed() -> void:
 	if current_model == null:
 		return
 
+	$AudioStreamPlayer2D.play()
 	idle_scene.despawnModel()
 	current_model = null
 
@@ -42,5 +42,7 @@ func _on_spin_pressed() -> void:
 	$spin.visible = false
 
 func resetRound():
+	$AudioStreamPlayer2D.stop()
 	current_spinner = null
 	$startRound.disabled = false
+	
