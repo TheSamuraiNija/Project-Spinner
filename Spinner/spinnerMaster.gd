@@ -143,6 +143,9 @@ func _set_rays_enabled(v):
 func _check_rays():
 	for r in rays:
 		if r.is_colliding():
+			var nodes = get_tree().get_nodes_in_group("idleGameplay")
+			if nodes.size() > 0:
+				nodes[0].playPing()
 			var normal = r.get_collision_normal()
 			normal.y = 0
 			normal = normal.normalized()
